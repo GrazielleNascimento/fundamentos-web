@@ -1,4 +1,3 @@
-
 /*
  acessa o Dom por:
 Tag : getElementByTagName()
@@ -17,12 +16,11 @@ let email = document.querySelector("#email");
 let assunto = document.querySelector("#assunto");
 
 
-let nomeOk = false
-let emailOk = false
-let mensagemOk = false
+let nomeOk = false;
+let emailOk = false;
+let mensagemOk = false;
 
-const mapa = document.querySelector('#mapa')
-
+let mapa = document.querySelector("#mapa");
 
 function validaNome() {
   let txt = document.querySelector("#txtNome");
@@ -35,8 +33,6 @@ function validaNome() {
   }
 }
 
-
-
 function validaEmail() {
   let txtEmail = document.querySelector("#email");
 
@@ -47,36 +43,35 @@ function validaEmail() {
     document.querySelector("#txtEmail").innerHTML = "E-mail válido";
     document.querySelector("#txtEmail").style.color = "green";
   }
+}
 
-  function validaAssunto() {
-    let txtAssunto = document.querySelector("#txtAssunto");
+function validaAssunto() {
+  let txtAssunto = document.querySelector("#txtAssunto");
 
-    if (assunto.value.length >= 100) {
-    txtAssunto.innerHTML = "Texto muito grande, digite no max 100 caracteres "
-    txtAssunto.style.color = 'red'
-    txtAssunto.style.display = 'block'
-  }else  {
-    txtAssunto.style.display = 'none'
+  if (assunto.value.length >= 100) {
+    txtAssunto.innerHTML = "Texto muito grande, digite no max 100 caracteres ";
+    txtAssunto.style.color = "red";
+    txtAssunto.style.display = "block";
+  } else {
+    txtAssunto.style.display = "none";
   }
 }
 
-function enviarForm() {
-    if(nomeOk === true && emailOk === true && mensagemOk === true) {
-      alert(nome.value + ', obrigado pelo contato, aguarde nosso retorno.')
+  function enviarForm() {
+    if (nomeOk === true && emailOk === true && mensagemOk === true) {
+      alert(nome.value + ", obrigado pelo contato, aguarde nosso retorno.");
     } else {
-      alert('Por favor, preencha todos os campos corretamente.')
+      alert("Por favor, preencha todos os campos corretamente.");
     }
   }
 
   function mapaZoom() {
-    mapa.style.width = "800px"
-    mapa.style.height = "600px"
-  }
-  
-  function mapaNormal() {
-    mapa.style.width = "400px"
-    mapa.style.height = "250px"
-    
+    mapa.style.width = "800px";
+    mapa.style.height = "600px";
   }
 
-}
+  function mapaNormal() {
+    mapa.style.width = "400px";
+    mapa.style.height = "250px";
+  }
+
